@@ -9,11 +9,13 @@ import Tutorial from "./pages/tutorial";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <Header />
-      <Route path="/" component={CreatePaste}></Route>
-      <Route path="/detail/:id" component={Detail} />
-      <Route path="/tutorial" component={Tutorial} />
+      <main role="main" className="pb-8">
+        <Route path="/" component={CreatePaste}></Route>
+        <Route path="/detail/:id" component={Detail} />
+        <Route path="/tutorial" component={Tutorial} />
+      </main>
       <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
